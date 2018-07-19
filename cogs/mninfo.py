@@ -53,13 +53,13 @@ class Masternodes:
         coins_locked = total_mn * 1000;
 
         embed= discord.Embed(colour=0x00FF00)
-        embed.set_author(name='ORE Masternode Information', icon_url="https://explorer.galactrum.org/images/logo.png")
+        embed.set_author(name='NORT Masternode Information', icon_url="http://explorer.nort.network/images/logo.png)
         embed.add_field(name="Total Masternodes", value="{}".format(total_mn))
         embed.add_field(name="Active Masternodes", value="{}".format(active_mn))
         embed.add_field(name='\u200b',value='\u200b')
-        embed.add_field(name="Daily Income", value="{0:.4f} ORE".format(daily_reward))
-        embed.add_field(name="Monthly Income", value="{0:.4f} ORE".format(monthly_reward))
-        embed.add_field(name="Yearly Income", value="{0:.4f} ORE".format(yearly_reward))
+        embed.add_field(name="Daily Income", value="{0:.4f} NORT".format(daily_reward))
+        embed.add_field(name="Monthly Income", value="{0:.4f} NORT".format(monthly_reward))
+        embed.add_field(name="Yearly Income", value="{0:.4f} NORT".format(yearly_reward))
         embed.add_field(name="Reward Frequency", value="{:02}:{:02}:{:02}".format(avg_reward_freq_hr,avg_reward_freq_min,avg_reward_freq_sec))
         embed.add_field(name="Days to ROI", value="{0:.0f} days".format(roi_days))
         embed.add_field(name="Annual ROI", value="{0:.2f}%".format(roi_yearly_percent))
