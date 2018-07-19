@@ -1,14 +1,14 @@
-# Galactrum-Bot
-[Galactrum Discord](https://discord.gg/PM3J6d)
+# Northern-Discord-Bot
+[Northern Discord](https://discordapp.com/invite/9nzt37V)
 
 
-These files are intended to function as a multi-functional bot for Galactrum (ORE)
+These files are intended to function as a multi-functional bot for Northern (NORT)
 
 # Requirements
 * discord.py installed
 * Python 3.6+
 * A MySQL database
-* The Galactrum wallet w/ RPC enabled.
+* The Northern wallet w/ RPC enabled.
 
 # Functions
 * Display general wallet information
