@@ -11,7 +11,7 @@
         },
         "rpc": {
             "rpc_host": "127.0.0.1",
-            "rpc_port": "6269",
+            "rpc_port": "9332",
             "rpc_user": "this username should match the one in the wallet config",
             "rpc_pass": "this password should match the one in the wallet config"
         },
@@ -43,6 +43,6 @@
         "txfee": 0,
         "owners": ["put your discord id here"],
         "prefix": "!",
-        "description": "Galactrum Bot"
+        "description": "Northern Bot"
     }
 ]}
