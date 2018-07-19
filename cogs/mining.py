@@ -24,7 +24,7 @@ class Mining:
         network_Ghs = network_hs/1000000000
         
         embed= discord.Embed(colour=0x00FF00)
-        embed.set_author(name='ORE Mining Information', icon_url="https://explorer.galactrum.org/images/logo.png")
+        embed.set_author(name='NORT Mining Information', icon_url="http://explorer.nort.network/images/logo.png")
         embed.add_field(name="Current Height", value='{}'.format(height))
         embed.add_field(name="Network Difficulty", value='{0:.2f}'.format(difficulty))
         embed.add_field(name="Network Hashrate", value='{0:.2f} GH/s'.format(network_Ghs))
@@ -36,7 +36,7 @@ class Mining:
             async with ClientSession() as session:
                 async with session.get("http://api.bsod.pw/api/currencies", headers=headers) as response:
                     responseRaw = await response.read()
-                    miningData = json.loads(responseRaw)["ORE"]
+                    miningData = json.loads(responseRaw)["NORT"]
 
                     workers = miningData["workers"]
                     shares = miningData["shares"]
@@ -54,7 +54,7 @@ class Mining:
                     embed.add_field(name="24hr Blocks", value='{}'.format(blocks24h))
                     embed.add_field(name="Last Block Found", value='{}'.format(lastblock))
                     embed.add_field(name="Time Since Last Block", value='{0:.2f} min'.format(timesincelast/60))
-                    embed.set_footer(text="ccminer.exe -a lyra2v2 -o stratum+tcp://pool.bsod.pw:1982 -u <Wallet Address>.<Rigname> -p c=ORE -R 5")
+                    embed.set_footer(text="ccminer.exe -a lyra2v2 -o stratum+tcp://pool.bsod.pw:1982 -u <Wallet Address>.<Rigname> -p c=NORT -R 5")
                     await self.bot.say(embed=embed)
 
         except:
@@ -65,7 +65,7 @@ class Mining:
             async with ClientSession() as session:
                 async with session.get("https://erstweal.com/api/currencies", headers=headers) as response:
                     responseRaw = await response.read()
-                    miningData = json.loads(responseRaw)["ORE"]
+                    miningData = json.loads(responseRaw)["NORT"]
 
                     workers = miningData["workers"]
                     shares = miningData["shares"]
