@@ -13,7 +13,7 @@ class Withdraw:
 
     @commands.command(pass_context=True)
     async def withdraw(self, ctx, address: str, amount: float):
-        """Withdraw coins from your account to any Galactrum address"""
+        """Withdraw coins from your account to any Northern address"""
         snowflake = ctx.message.author.id    
         channel_name = ctx.message.channel.name
         allowed_channels = parsing.parse_json('config.json')['command_channels'][ctx.command.name]
