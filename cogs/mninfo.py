@@ -20,24 +20,15 @@ class Masternodes:
         block_number = self.rpc.getblockcount()
         total_mn = 0
         active_mn = 0
-        curr_block_reward = 10
-        reward_halfing = math.floor(block_number/1314900)
-
-        if block_number < 197100:
-            curr_mn_reward_percent = 0.5
-        else:
-            curr_mn_reward_percent = 0.45
-
-        if reward_halfing > 0:
-            for i in range(0,reward_halfing):
-                curr_block_reward = curr_block_reward / 2
+        curr_block_reward = 3.75  
+        curr_mn_reward_percent = 0.85
 
         for key,value in mn_info.items():
             if value == 'ENABLED':
                 active_mn += 1
             total_mn += 1
 
-        daily_reward = (1/active_mn) * curr_block_reward * 720 * curr_mn_reward_percent
+        daily_reward = (1/active_mn) * curr_block_reward * 1440 * curr_mn_reward_percent
         weekly_reward = daily_reward * 7
         monthly_reward = daily_reward * 30
         yearly_reward = daily_reward * 365
