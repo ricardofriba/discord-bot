@@ -16,7 +16,7 @@ class Masternodes:
         if channel_name not in allowed_channels:
             return
 
-        mn_info = self.rpc.masternodelist()
+        mn_info = self.rpc.listmasternodes()
         block_number = self.rpc.getblockcount()
         total_mn = 0
         active_mn = 0
@@ -24,7 +24,7 @@ class Masternodes:
         curr_mn_reward_percent = 0.85
 
         for key,value in mn_info.items():
-            if value == 'ENABLED':
+            if value == '"ENABLED"':
                 active_mn += 1
             total_mn += 1
 
@@ -44,7 +44,7 @@ class Masternodes:
         coins_locked = total_mn * 1000;
 
         embed= discord.Embed(colour=0x00FF00)
-        embed.set_author(name='NORT Masternode Information', icon_url="http://explorer.nort.network/images/logo.png)
+        embed.set_author(name='NORT Masternode Information', icon_url="http://explorer.nort.network/images/logo.png")
         embed.add_field(name="Total Masternodes", value="{}".format(total_mn))
         embed.add_field(name="Active Masternodes", value="{}".format(active_mn))
         embed.add_field(name='\u200b',value='\u200b')
