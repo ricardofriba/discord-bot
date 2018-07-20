@@ -28,11 +28,11 @@ class Stats:
                     for item in priceData:
                         embed= discord.Embed(colour=0x00FF00)
                         embed.set_author(name='NORT Information', icon_url="http://explorer.nort.network/images/logo.png")
-                        embed.add_field(name="Price (BTC)", value="${}".format(item['price']))                    
-                        embed.add_field(name="Volume (BTC)", value="${}".format(item['total_volume_24h']))
-                        embed.add_field(name="% 1h", value="{}%".format(item['delta_1h']))
-                        embed.add_field(name="% 24h", value="{}%".format(item['delta_24h']))
-                        embed.add_field(name="% 7d", value="{}%".format(item['delta_7d']))
+                        embed.add_field(name="Price (BTC)", value="${}".format(item['price:']))                    
+                        embed.add_field(name="Volume (BTC)", value="${}".format(item['total_volume_24h:']))
+                        embed.add_field(name="% 1h", value="{}%".format(item['delta_1h:']))
+                        embed.add_field(name="% 24h", value="{}%".format(item['delta_24h:']))
+                        embed.add_field(name="% 7d", value="{}%".format(item['delta_7d:']))
                         embed.set_footer(text="https://wallet.crypto-bridge.org/market/BRIDGE.NORT_BRIDGE.BTC", icon_url="http://explorer.nort.network/images/logo.png")
                     await self.bot.say(embed=embed)
         except:

@@ -2,7 +2,6 @@ import discord, json, requests, math
 from discord.ext import commands
 from utils import rpc_module as rpc, parsing
 
-
 class Masternodes:
     def __init__(self, bot):
         self.bot = bot
@@ -23,9 +22,9 @@ class Masternodes:
         curr_block_reward = 3.75  
         curr_mn_reward_percent = 0.85
 
-        for key,value in mn_info.items():
-            if value == '"ENABLED"':
-                active_mn += 1
+        for mn in mn_info:
+            if (mn["status"] == "ENABLED") or (mn["status"] == "WATCHDOG_EXPIRED"):
+               active_mn += 1
             total_mn += 1
 
         daily_reward = (1/active_mn) * curr_block_reward * 1440 * curr_mn_reward_percent
@@ -33,13 +32,13 @@ class Masternodes:
         monthly_reward = daily_reward * 30
         yearly_reward = daily_reward * 365
 
-        avg_reward_freq = (active_mn * 2)/60
+        avg_reward_freq = (active_mn * 1)/60
         avg_reward_freq_hr = math.floor(avg_reward_freq)
         avg_reward_freq_min = math.floor((avg_reward_freq - avg_reward_freq_hr)*60)
         avg_reward_freq_sec = math.floor((avg_reward_freq - avg_reward_freq_hr - (avg_reward_freq_min/60))*3600)
 
-        roi_days = 1000/daily_reward
-        roi_yearly_percent = ((daily_reward * 365)/1000)*100
+        roi_days = 2500/daily_reward
+        roi_yearly_percent = ((daily_reward * 365)/2500)*100
 
         coins_locked = total_mn * 1000;
 
