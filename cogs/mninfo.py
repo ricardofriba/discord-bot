@@ -40,7 +40,7 @@ class Masternodes:
         roi_days = 2500/daily_reward
         roi_yearly_percent = ((daily_reward * 365)/2500)*100
 
-        coins_locked = total_mn * 1000;
+        coins_locked = total_mn * 2500;
 
         embed= discord.Embed(colour=0x00FF00)
         embed.set_author(name='NORT Masternode Information', icon_url="http://explorer.nort.network/images/logo.png")
