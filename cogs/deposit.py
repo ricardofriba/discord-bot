@@ -20,7 +20,7 @@ class Deposit:
         # Check if user exists in db
         mysql.check_for_user(user.id)
         user_addy = mysql.get_address(user.id)
-        await self.bot.say(user.mention + "'s Deposit Address: `" + str(user_addy) + "`" + "\n\nRemember to use !balance to check your balance and not an explorer. The address balance and your actual balance are not always the same!\n\n:warning: DISCLAIMER: This is BETA software! Do not send large amounts of ORE! The developers are not reliable for any lost ORE! :warning:")
+        await self.bot.say(user.mention + "'s Deposit Address: `" + str(user_addy) + "`" + "\n\nRemember to use !balance to check your balance and not an explorer. The address balance and your actual balance are not always the same!\n\n:warning: DISCLAIMER: This is BETA software! Do not send large amounts of NORT! The developers are not reliable for any lost NORT! :warning:")
 
 def setup(bot):
     bot.add_cog(Deposit(bot))
