@@ -42,10 +42,8 @@ You should see a status message that says "active (running)".
 Python should be updated to version 3.6 because version 3.5 is not compatible with some libraries
 ```
 sudo add-apt-repository ppa:jonathonf/python-3.6
-sudo apt update
-sudo apt-get install python3.6
-sudo apt-get install python3.6-dev
-sudo apt-get install python3.6-venv
+sudo apt-get update
+sudo apt-get install python3.6 python3.6-dev python3.6-venv
 ```
 ## Install Python's pip
 Python's pip is a useful tool used to install python libraries
