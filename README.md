@@ -1,5 +1,5 @@
-# Northern-Discord-Bot
-[Northern Discord](https://discordapp.com/invite/9nzt37V)
+# Flamecoin Tipping Bot
+[Flamecoin Discord](https://discord.gg/jVzzxju)
 
 
 These files are intended to function as a multi-functional bot for Northern (NORT)
@@ -8,7 +8,7 @@ These files are intended to function as a multi-functional bot for Northern (NOR
 * discord.py installed
 * Python 3.6+
 * A MySQL database
-* The Northern wallet w/ RPC enabled.
+* The Flamecoin wallet w/ RPC enabled.
 
 # Functions
 * Display general wallet information
